@@ -1,0 +1,280 @@
+﻿$background-color: #010f1a;
+$text-color: white;
+$special-color: #fcff00;
+$menu-border: 2px solid white;
+
+@mixin text-outerglow($x, $y, $blur, $color) {
+    text-shadow: $x $y $blur $color;
+}
+
+@mixin border-styles($border-weight, $border-style, $border-color, $border-radius) {
+    border: $border-weight $border-style $border-color;
+    border-radius: $border-radius;
+    overflow: hidden;
+}
+
+@mixin display-flex($direction, $wrap, $justify) {
+    display: flex;
+    -ms-flex-flow: $direction $wrap;
+    -webkit-flex-flow: $direction $wrap;
+    flex-flow: $direction $wrap;
+    justify-content: $justify;
+}
+
+.display-flex {
+    display: flex;
+    -ms-flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 16px;
+    background-color: $background-color;
+    color: $text-color;
+
+    #wrapper {
+        /*position: absolute;*/
+        width: 960px;
+        margin: 5px;
+
+        header {
+            position: relative;
+            margin: 5px;
+            width: 100%;
+
+            @include border-styles(2px, ridge, #808080, 15px);
+            @include display-flex(row, wrap, space-between);
+
+            div {
+                width: 320px;
+            }
+
+            h1 {
+                font-family: Courier New, Courier, monospace;
+                @include text-outerglow(0, 0, 5px, $text-color);
+                position: absolute;
+                top: 50px;
+                left: 5%;
+                z-index: 1;
+            }
+        }
+
+        main {
+            margin: 10px auto;
+            width: 100%;
+            @include display-flex(row, wrap, space-between);
+
+            nav {
+                margin: 10px;
+                width: 200px;
+                height: 140px;
+                border: 2px ridge;
+                @include border-styles(2px, ridge, #808080, 15px);
+
+                ul {
+                    list-style-type: none;
+
+                    li {
+                        margin: 5px auto;
+
+                        a {
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+
+            section {
+                position: relative;
+                width: 700px;
+                margin: 10px;
+                @include border-styles(2px, ridge, #808080, 15px);
+                @include display-flex(column, nowrap, space-around);
+
+                h4 {
+                    text-align: center;
+                }
+
+                div {                    
+
+                    #question {
+                        margin-left: 50px;
+                        @include display-flex(row, nowrap, baseline);
+
+                        div {
+                            margin-right: 10%;
+
+                            h5 {
+                                margin-bottom: 0;
+                            }
+
+                            p {
+                                font-size: 0.9em;
+
+                                span {
+                                    color: $special-color;
+                                }
+                            }
+                        }
+
+                        #wizard-image-container {
+                            width: 35%;
+                        }
+                    }
+
+                    #answers {
+                        @include display-flex(row, nowrap, space-around);
+                        margin: 20px;
+
+                        a {
+                            width: 25%;
+
+                            .answer {
+                                text-align: center;
+                                padding: 5px;
+                                width: 100%;
+                                @include border-styles(1px, solid, $text-color, 5px);
+
+                                &:hover {
+                                    background-color: $text-color;
+                                    color: $background-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        footer {
+
+            div{
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 970px) {
+    body {
+
+        #wrapper {
+            width: 95%;
+        }
+    }
+}
+
+@media only screen and (max-width: 965px) {
+    body {
+
+        #wrapper {
+
+            main {
+                @include display-flex(column, nowrap, center);
+
+                nav {
+                    width: 100%;
+                    height: auto;
+
+                    ul {
+                        padding: 0;
+                        @include display-flex(row, nowrap, space-around);
+                    }
+                }
+
+                section {
+                    width: 100%;
+
+                    div {
+                        /*&#to-the-quiz {
+                            margin-left: 10%;
+                        }*/
+                        /*&#wizard-image-container {
+                            img[alt="code wizard Nakov"] {
+                                bottom: 160px;
+                            }
+                        }*/
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 756px) {
+    body {
+
+        #wrapper {
+
+            header {
+                justify-content: flex-start;
+
+                div#bit-code-image-container {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    body {
+        font-size: 12px;        
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    body {
+
+        #wrapper {
+
+            main {
+
+                nav {
+                    border: none;
+                    margin: 0;
+                    
+                    ul {
+                        display: inherit;
+                        text-align: center;
+
+                        li {
+                            @include border-styles(1px, solid, $text-color, 5px);
+                            margin: 5px;
+                        }                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 335px) {
+    body {
+
+        #wrapper {
+
+            header {
+
+                div {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

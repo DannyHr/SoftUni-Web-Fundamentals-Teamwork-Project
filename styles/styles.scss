@@ -45,13 +45,11 @@ body {
     color: $text-color;
 
     #wrapper {
-        /*position: absolute;*/
         width: 960px;
-        margin: 5px;
-
+        margin: 5px auto;
+        
         header {
             position: relative;
-            margin: 5px;
             width: 100%;
 
             @include border-styles(2px, ridge, #808080, 15px);
@@ -77,7 +75,7 @@ body {
             @include display-flex(row, wrap, space-between);
 
             nav {
-                margin: 10px;
+                margin-bottom: 10px;
                 width: 200px;
                 height: 140px;
                 border: 2px ridge;
@@ -102,7 +100,6 @@ body {
             section {
                 position: relative;
                 width: 700px;
-                margin: 10px;
                 @include border-styles(2px, ridge, #808080, 15px);
                 @include display-flex(column, nowrap, space-around);
 
@@ -110,7 +107,7 @@ body {
                     text-align: center;
                 }
 
-                div {                    
+                div {
 
                     #question {
                         margin-left: 50px;
@@ -158,12 +155,32 @@ body {
                         }
                     }
                 }
+
+                .team-mates-container {
+                    @include display-flex(row, wrap, space-around);
+                    text-align: center;
+                    margin: 10px;
+
+                    .team-mate {
+                        width: 15%;
+                    }
+                }
             }
         }
 
         footer {
 
-            div{
+            a {
+                border-right: 1px solid white;
+                padding: 10px;
+
+                &:last-child {
+                    border-right: none;
+                }
+            }
+
+            div {
+                margin: 30px;
                 text-align: center;
             }
         }
@@ -199,17 +216,6 @@ body {
 
                 section {
                     width: 100%;
-
-                    div {
-                        /*&#to-the-quiz {
-                            margin-left: 10%;
-                        }*/
-                        /*&#wizard-image-container {
-                            img[alt="code wizard Nakov"] {
-                                bottom: 160px;
-                            }
-                        }*/
-                    }
                 }
             }
         }
@@ -234,7 +240,30 @@ body {
 
 @media only screen and (max-width: 570px) {
     body {
-        font-size: 12px;        
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    body {
+
+        #wrapper {
+
+            main {
+
+                section {
+
+                    .team-mates-container {
+                        @include display-flex(column, nowrap, space-around);
+                        align-items: center;
+
+                        .team-mate {
+                            margin: 10px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -248,7 +277,7 @@ body {
                 nav {
                     border: none;
                     margin: 0;
-                    
+
                     ul {
                         display: inherit;
                         text-align: center;
@@ -256,7 +285,7 @@ body {
                         li {
                             @include border-styles(1px, solid, $text-color, 5px);
                             margin: 5px;
-                        }                        
+                        }
                     }
                 }
             }

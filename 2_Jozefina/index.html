@@ -1,9 +1,165 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title></title>
-</head>
-<body>
-
-</body>
+	<head>
+		<title></title>
+		<link rel="stylesheet" href="styles.css"/>
+	</head>
+	<body>
+		<div id="wrapper">
+			<header>
+				<div id="javascript-code-image-container">
+					<img src="images/code1.PNG" alt="javascript-code-image" />
+				</div>
+				<h1>
+					<a href="index.html">&lt;Are you a programmer? &#47;&gt;&#95;</a>
+				</h1>
+				<div id="bit-code-image-container">
+					<img src="images/code2.PNG" alt="bits-code-image" class="removable" />
+				</div>
+			</header>
+			<main>	
+				<header>
+					<h2>Part 2 - Personality Quiz</h2>
+					<p>The Software University is an unordinary place. To get in
+					you must possess certain qualities. These are quite rare and
+					are found in only 0.1% of people. Take this short test and find
+					out whether you have it in you to be a good programmer!</p>
+				</header>
+				<form method="post">
+					<div class="question">
+						<h3>1. You are at a party and of course you have locked yourself
+						in a room so you can code in quiet. But some annoying guy breaks
+						the door, plays chalga music and starts belly dancing! What do
+						you do?</h3>
+						<input type="radio" name="answer1" id="a1" required="required"/> <span>I can't stand his dancing so I get up and show him some moves!</span><br/>
+						<input type="radio" name="answer1" id="a2"/> I can't be bothered to do anything, I'll just wait until he goes away.. <br/>
+						<input type="radio" name="answer1" id="a3"/> I am too concentrated in my code, I don't even notice him.<br/>
+					</div>
+					<div class="question">
+						<h3>2. You wake up in the morning, sober of course(10 beers is nothing for you), 
+						and you see that your laptop is missing. What is the first thing you think of?</h3>
+						<input type="radio" name="answer2" id="b1" required="required"/> NOOO! I just made a new pop-folk megamix summer 2020! All those hours spent for nothing.. ;( <br/>
+						<input type="radio" name="answer2" id="b2"/> Oh.. I'll just sleep some more until it shows up. <br/>
+						<input type="radio" name="answer2" id="b3"/> I create a tracking program and find my laptop within minutes.<br/>
+					</div>
+					<div class="question">
+						<h3>3. Which one of these most grabs your attention?</h3>
+						<input type="radio" name="answer3" id="c1" required="required"/> <img src="images/storaro.jpg" alt="Napkins" width="250px" height="200px"<br/>
+						<input type="radio" name="answer3" id="c2"/> <img src="images/pillow.jpg" alt="Pillow" width="250px" height="200px"<br/>
+						<input type="radio" name="answer3" id="c3"/> <img src="images/nakov.png" alt="Nakov's C# book" width="150px" height="200px"<br/>
+					</div>
+					<div class="question">
+						<h3>4. Your mom kicks you out and you're kind of homeless now. Well, that
+						sucks, but it's ok you're 30 now, you can manage on your own! What's
+						the best life advice you can give to yourself?</h3>
+						<input type="radio" name="answer4" id="d1" required="required"/> I'll call my friends and we can go to Biad together. I'll spend the night there. And the rest of my nights!<br/>
+						<input type="radio" name="answer4" id="d2"/> I don't care..whatever..I'll just walk around the neighbourhood and someone will feel sorry for me and take me in.<br/>
+						<input type="radio" name="answer4" id="d3"/> Home is where my laptop is.<br/>
+					</div>
+					<div class="question">
+						<h3>5. So you've decided it's time to get rid of that virginity of yours!
+						You put on your best T-shirt and walk into a bar. You see her/him standing there
+						with those beautiful glasses (they're probably the same dioptre too!).
+						What do you do?</h3>
+						<input type="radio" name="answer5" id="e1" required="required"/> You start talking about how rich you are, how many cars you have, how many people you know, you say you like drugs and alcohol and ask to hang out in the toilet.<br/>
+						<input type="radio" name="answer5" id="e2"/> You think you look fabulous tonight. So you just sit in the corner and wait for her/him to notice you and come flirt with you.<br/>
+						<input type="radio" name="answer5" id="e3"/> You know you can impress anyone with your coding skills. You go and show her/him that C# project you've been preparing all your life for your wedding day.<br/>
+					</div>
+					<input type="submit" value="Submit" onclick="fSubmit()"/>
+				</form>
+			</main>
+			<footer>
+				<div id="numbers">
+					<a href="../index.html">
+						1
+					</a>
+					<a href="index.html">
+						2
+					</a>
+					<a href="../3_Daniel/index.html">
+						3
+					</a>
+					<a href="../4_Konstantin/index.html">
+						4
+					</a>
+					<a href="../5_Miroslav/index.html">
+						5
+					</a>
+				</div>
+				<div>
+					&copy;All rights reserved.
+				</div>
+			</footer>
+		</div>
+		<script type="text/javascript">
+			var firstScore = 0;
+			var secondScore = 0;
+			var thirdScore = 0;
+			function fSubmit(){
+				if(document.getElementById("a1").checked == true){
+					firstScore++;
+				}
+				else if(document.getElementById("a2").checked == true){
+					secondScore++;
+				}
+				else if(document.getElementById("a3").checked == true){
+					thirdScore++;
+				}
+				if(document.getElementById("b1").checked == true){
+					firstScore++;
+				}
+				else if(document.getElementById("b2").checked == true){
+					secondScore++;
+				}
+				else if(document.getElementById("b3").checked == true){
+					thirdScore++;
+				}
+				if(document.getElementById("c1").checked == true){
+					firstScore++;
+				}
+				else if(document.getElementById("c2").checked == true){
+					secondScore++;
+				}
+				else if(document.getElementById("c3").checked == true){
+					thirdScore++;
+				}
+				if(document.getElementById("d1").checked == true){
+					firstScore++;
+				}
+				else if(document.getElementById("d2").checked == true){
+					secondScore++;
+				}
+				else if(document.getElementById("d3").checked == true){
+					thirdScore++;
+				}
+				if(document.getElementById("e1").checked == true){
+					firstScore++;
+				}
+				else if(document.getElementById("e2").checked == true){
+					secondScore++;
+				}
+				else if(document.getElementById("e3").checked == true){
+					thirdScore++;
+				}
+				if(firstScore >= 3){
+					window.open('firstScore.html');
+				}
+				else if(secondScore >= 3){
+					window.open('secondScore.html');
+				}
+				else if(thirdScore >= 3){
+					window.open('thirdScore.html');
+				}
+				else if(firstScore >= 2){
+					window.open('secondScore.html');
+				}
+				else if(secondScore >= 2){
+					window.open('secondScore.html');
+				}
+				else if(thirdScore >= 2){
+					window.open('thirdScore.html');
+				}
+			}
+		</script>
+	</body>
 </html>

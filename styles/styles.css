@@ -20,6 +20,7 @@ body {
   font-size: 16px;
   background-color: #010f1a;
   color: white;
+  text-shadow: 1px 1px 1px white;
 }
 
 body #wrapper {
@@ -172,6 +173,20 @@ body #wrapper main section .team-mates-container .team-mate {
   width: 15%;
 }
 
+body #wrapper main section .friends-container {
+  display: flex;
+  -ms-flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: baseline;
+  margin: 10px;
+}
+
+body #wrapper main section .friends-container .friend {
+  width: 30%;
+}
+
 body #wrapper footer a {
   border-right: 1px solid white;
   padding: 10px;
@@ -233,7 +248,7 @@ body #wrapper footer div {
 }
 
 @media only screen and (max-width: 500px) {
-  body #wrapper main section .team-mates-container {
+  body #wrapper main section .team-mates-container, body #wrapper main section .friends-container {
     display: flex;
     -ms-flex-flow: column nowrap;
     -webkit-flex-flow: column nowrap;
@@ -241,8 +256,12 @@ body #wrapper footer div {
     justify-content: space-around;
     align-items: center;
   }
-  body #wrapper main section .team-mates-container .team-mate {
+  body #wrapper main section .team-mates-container .team-mate, body #wrapper main section .team-mates-container .friend, body #wrapper main section .friends-container .team-mate, body #wrapper main section .friends-container .friend {
+    width: 90%;
     margin: 10px;
+  }
+  body #wrapper main section .team-mates-container .team-mate p, body #wrapper main section .team-mates-container .friend p, body #wrapper main section .friends-container .team-mate p, body #wrapper main section .friends-container .friend p {
+    text-align: center;
   }
 }
 

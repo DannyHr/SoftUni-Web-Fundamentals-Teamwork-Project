@@ -43,11 +43,12 @@ body {
     font-size: 16px;
     background-color: $background-color;
     color: $text-color;
+    @include text-outerglow(1px, 1px, 1px, white);
 
     #wrapper {
         width: 960px;
         margin: 5px auto;
-        
+
         header {
             position: relative;
             width: 100%;
@@ -165,6 +166,16 @@ body {
                         width: 15%;
                     }
                 }
+
+                .friends-container {
+                    @include display-flex(row, wrap, space-around);
+                    align-items: baseline;
+                    margin: 10px;
+
+                    .friend {
+                        width: 30%;
+                    }
+                }
             }
         }
 
@@ -253,12 +264,17 @@ body {
 
                 section {
 
-                    .team-mates-container {
+                    .team-mates-container, .friends-container {
                         @include display-flex(column, nowrap, space-around);
                         align-items: center;
 
-                        .team-mate {
+                        .team-mate, .friend {
+                            width: 90%;
                             margin: 10px;
+
+                            p {
+                                text-align: center;
+                            }
                         }
                     }
                 }

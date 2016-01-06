@@ -32,3 +32,19 @@ article > h3{
 p {
 	margin-top: 30px;
 }
+
+body #wrapper footer a {
+  text-decoration: none;
+  color: black;
+  border-right: 1px solid black;
+  padding: 10px;
+}
+
+body #wrapper footer a:last-child {
+  border-right: none;
+}
+
+body #wrapper footer div {
+  margin: 30px;
+  text-align: center;
+}

@@ -33,20 +33,6 @@
 				</div>
 				<input type="submit" value="Submit" onclick="fSubmit()"/>
 			</form>
-
-			<script type="text/javascript">
-				function fSubmit() {
-					if(document.getElementById("a1").checked == true){
-						window.open("continue-test.html");
-					} else if (document.getElementById("a2").checked == true) {
-						window.open("end-fail-beer-test.html");
-					} else if (document.getElementById("a3").checked == true) {
-						window.open("possibly-continue.html");
-					} else if (document.getElementById("a4").checked == true) {
-						window.open("end-test.html");
-					}
-				}
-			</script>
 		</main>
 		<footer>
 			<div id="numbers">
@@ -71,5 +57,18 @@
 			</div>
 		</footer>
 	</div>
+	<script type="text/javascript">
+				function fSubmit() {
+					if(document.getElementById("a1").checked == true){
+						window.open("continue-test.html");
+					} else if (document.getElementById("a2").checked == true) {
+						window.open("end-fail-beer-test.html");
+					} else if (document.getElementById("a3").checked == true) {
+						window.open("continue-test.html");
+					} else if (document.getElementById("a4").checked == true) {
+						window.open("end-test.html");
+					}
+				}
+			</script>
 </body>
 </html>

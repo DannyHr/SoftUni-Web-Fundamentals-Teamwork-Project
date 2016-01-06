@@ -1,23 +1,75 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta charset="UTF-8" />
-		<link href="style.css" rel="stylesheet" type="text/css" />
-		<title></title>
-	</head>
-	<body>
-		<div id="wrapper">
+<head>
+	<meta charset="UTF-8" />
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<title></title>
+</head>
+<body>
+	<div id="wrapper">
+		<header>
+			<div id="javascript-code-image-container">
+				<img src="images/code1.PNG" alt="javascript-code-image" />
+			</div>
+			<h1>
+				<a href="index.html">&lt;Are you a programmer? &#47;&gt;&#95;</a>
+			</h1>
+			<div id="bit-code-image-container">
+				<img src="images/code2.PNG" alt="bits-code-image" class="removable" />
+			</div>
+		</header>
+		<main>
 			<header>
-				<div id="javascript-code-image-container">
-					<img src="images/code1.PNG" alt="javascript-code-image" />
-				</div>
-				<h1>
-					<a href="index.html">&lt;Are you a programmer? &#47;&gt;&#95;</a>
-				</h1>
-				<div id="bit-code-image-container">
-					<img src="images/code2.PNG" alt="bits-code-image" class="removable" />
-				</div>
+				<h2>Part 3 - Drinking Habits</h2>
+				<p>WARNING! THIS PART IS VERY, VERY IMPORTANT! FAILING HERE CAN BE DECISIVE FOR YOUR PROGRAMMING CAREER.</p>
 			</header>
-			
-	</body>
+			<form method="post">
+				<div class="question">
+					<h3>1. Do you like beer?</h3>
+					<input type="radio" name="question1" id="a1" required="required"/><span> Yes. I LOVE beer!</span><br/>
+					<input type="radio" name="question1" id="a2"/> No. I don't like beer at all!<br/>
+					<input type="radio" name="question1" id="a3"/> I have never tried beer but I'm interested in trying.<br/>
+					<input type="radio" name="question1" id="a4"/> I have never tried beer and will NOT ever try.<br/>
+				</div>
+				<input type="submit" value="Submit" onclick="fSubmit()"/>
+			</form>
+
+			<script type="text/javascript">
+				function fSubmit() {
+					if(document.getElementById("a1").checked == true){
+						window.open("continue-test.html");
+					} else if (document.getElementById("a2").checked == true) {
+						window.open("end-fail-beer-test.html");
+					} else if (document.getElementById("a3").checked == true) {
+						window.open("possibly-continue.html");
+					} else if (document.getElementById("a4").checked == true) {
+						window.open("end-test.html");
+					}
+				}
+			</script>
+		</main>
+		<footer>
+			<div id="numbers">
+				<a href="../index.html">
+					1
+				</a>
+				<a href="../2_Jozefina/index.html">
+					2
+				</a>
+				<a href="index.html">
+					3
+				</a>
+				<a href="../4_Konstantin/index.html">
+					4
+				</a>
+				<a href="../5_Miroslav/index.html">
+					5
+				</a>
+			</div>
+			<div>
+				&copy;All rights reserved.
+			</div>
+		</footer>
+	</div>
+</body>
 </html>

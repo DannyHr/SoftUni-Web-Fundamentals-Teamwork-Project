@@ -1,0 +1,137 @@
+. {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face{
+    font-family: "Mirage";
+    src: url(fonts/Mirage.ttf);
+}
+
+@font-face{
+    font-family: "ItNeverStops";
+    src: url(fonts/itneverstops.ttf);
+}
+
+body{
+    background-color: #010F1A;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+body #wrapper {
+    width: 80%;
+    margin: 5px auto;
+    color: white;
+    font-family: Tahoma, Verdana, sans-serif;
+}
+
+body #wrapper > header {
+    position: relative;
+    width: 100%;
+    border: 2px ridge #808080;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+body #wrapper header div {
+    width: 320px;
+}
+
+body #wrapper header h1 {
+    font-family: Courier New, Courier, monospace;
+    text-shadow: 0 0 5px white;
+    position: absolute;
+    top: 50px;
+    left: 5%;
+    z-index: 1;
+}
+
+main > header > h2 {
+    text-align: center;
+    font-size: 2.7em;
+    font-family: Mirage, sans-serif;
+    letter-spacing: 10px;
+}
+
+main > header > p {
+    text-indent: 1.2em;
+    font-size: 1.2em;
+    font-family: ItNeverStops, sans-serif;
+    letter-spacing: 0.1em;
+}
+
+main > header{
+    border-bottom: 1px solid #808080;
+}
+
+.question:nth-child(3)>input{
+    vertical-align: top;
+}
+
+main > form{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#010f1a+19,029394+35,029394+49,010f1a+69 */
+    background: #010f1a; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover,  #010f1a 19%, #029394 35%, #029394 49%, #010f1a 69%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover,  #010f1a 19%,#029394 35%,#029394 49%,#010f1a 69%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center,  #010f1a 19%,#029394 35%,#029394 49%,#010f1a 69%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#010f1a', endColorstr='#010f1a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.question{
+    margin-bottom: 30px;
+}
+
+.question > h3{
+    color: #CE8002;
+}
+
+.question > input{
+    margin-bottom: 10px;
+}
+
+input[type="submit"]{
+    width: 20%;
+    height: 30px;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-left: 40%;
+    border: 1px solid white;
+    color: white;
+    background-color: transparent;
+}
+
+body #wrapper footer a {
+    border-right: 1px solid white;
+    padding: 10px;
+}
+
+body #wrapper footer a:last-child {
+    border-right: none;
+}
+
+body #wrapper footer div {
+    margin: 30px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 960px){
+    input[type="radio"]{
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 840px){
+    #bit-code-image-container{
+        display: none;
+    }
+}
